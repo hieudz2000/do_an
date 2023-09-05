@@ -1,0 +1,39 @@
+{
+  "name": "extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' ; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "tt.png",
+      "32": "tt.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+
+      "js": [
+        "background.js"
+        
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["scripting", "nativeMessaging", "tabs",  "storage"],
+  "background": {
+    "service_worker": "popup.js"
+  },
+  "web_accessible_resources": [
+    { "resources": ["new_window.html"], "matches": ["*://*/*"] },
+    { "resources": ["popup.html"], "matches": ["*://*/*"] },
+    { "resources": ["a.js"], "matches": ["*://*/*"] },
+    { "resources": ["css/b.css"], "matches": ["*://*/*"] }
+   
+  ]
+}

@@ -1,0 +1,32 @@
+Hướng dẫn cài đặt extension: 
+
+Bước 1: tải file rar mã nguồn về máy 
+Bước 2: Giải nén mã nguồn
+
+1. cài đặt extension (cd đến folder extension):
+	b1:Mở trình duyệt Google Chrome.
+	b2:Truy cập vào trang "chrome://extensions/".
+	b3:Bật chế độ "Chế độ nhà phát triển" (Developer mode) ở góc phải trên cùng của trang.
+	b4:Nhấp vào nút "Tải tiện ích đã giới thiệu" (Load unpacked).
+	Chọn thư mục của extension (chứa file "manifest.json" trong folder extension ) và nhấn "OK" để cài đặt extension.
+
+2. cài đặt backend 
+tải file này về máy và đưa vào thư mục data_tranning :
+https://drive.google.com/file/d/17N34LZcf8wPVWSdFWbzFRLU28DgZCr5y/view?usp=sharing
+
+	b1: vào thư mục backendTest
+	b2: mở teminal lên và chạy lần lượt các lệnh sau 
+	- install python: 
+		+ sudo apt install software-properties-common
+		+sudo add-apt-repository ppa:deadsnakes/ppa
+		+sudo apt install python3
+	-install django : 
+			+python -m pip install Django
+
+	-setup databases:
+		+ python manage.py migrate
+		+ python manage.py makemigrations
+
+	b3: run server : python manage.py runserver
+
+

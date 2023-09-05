@@ -1,0 +1,160 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/popup_css.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h2>BLOCK LINK 18+</h2>
+    </div>
+
+    <div style="padding-top: 10px">
+      <div class="tabs" id="tabsID">
+        <div class="tab br-top" id="setting">
+          <img src="./image/setting.png" />
+          <div>Setting</div>
+        </div>
+        <div class="tab" id="history">
+          <img src="./image/history.png" />
+          <div>History</div>
+        </div>
+        <div class="tab" id="thongke">
+          <img src="./image/thongke.png" />
+          <div>statistical</div>
+        </div>
+        <div class="tab" id="showModelButton">
+          <img src="./image/login.png" />
+          <div>Login</div>
+        </div>
+      </div>
+
+      <div class="tab-content active" id="content-setting">
+        <div id="setting-login">
+          <div>
+            <p class="text-setting" id="add-link">Add link block</p>
+            <input
+              id="input-add-link"
+              type="text"
+              name="input-link"
+              placeholder="Enter link ..."
+            />
+
+            <button id="id-input" class="button button--piyo">
+              <div class="button__wrapper">
+                <span class="button__text">ADD</span>
+              </div>
+              <div class="characterBox">
+                <div class="character wakeup">
+                  <div class="character__face"></div>
+                </div>
+
+                <div class="character">
+                  <div class="character__face"></div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <div>
+            <p class="text-setting">Add text block</p>
+            <input
+              type="text"
+              name="input-text"
+              id="input-text"
+              placeholder="Enter text ..."
+            />
+
+            <button id="bt-add" class="button button--hoo">
+              <div class="button__wrapper">
+                <span class="button__text">ADD</span>
+              </div>
+              <div class="characterBox">
+                <div class="character wakeup">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+                  <div class="charactor__body"></div>
+                </div>
+
+                <div class="character">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+                  <div class="charactor__body"></div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <div class="link-list" id="linkList">
+            <!-- Links will be dynamically added here -->
+          </div>
+          <div id="paginationContainer"></div>
+        </div>
+        <div id="setting-no-login">
+          ban chua dang nhap de cau hinh setting
+        </div>
+      </div>
+      <div class="tab-content" id="content-history">
+        <div id="links-container-history">
+          <div id="table-history" style="display: none">
+            <div id="table-container">
+              <table id="data-table">
+                <thead>
+                  <tr>
+                    <th>Link</th>
+                    <th>Time</th>
+                    <th style="width: 18%">block</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+              </table>
+            </div>
+            <div id="pagination-container">
+              <ul id="pagination"></ul>
+            </div>
+          </div>
+          <div id="history-no-login" >ban chua login de xem lich su</div>
+        </div>
+      </div>
+      <div class="tab-content" id="content-thongke">
+        <div id="thongke-login">
+          <h2>Blocked link number : 2</h2>
+          <table id="history-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Total Link</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div style="margin-top: 20px" id="pagination-thongke"></div>
+        </div>
+        <div id="thongke-no-login"> ban chua dang nhap de xem thong ke</div>
+      </div>
+      <div class="tab-content" id="content-login">
+        <div id="logined">
+          
+          <div id="divLog" style="text-align: end; margin-top: 5px">
+            <table id="login-history-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+
+            <div id="pagination-login"></div>
+            <button class="logOut" id="log-out">Log out</button>
+          </div>
+        </div>
+        <div id="no-login" style="display:none"> ban hay dang nhap de su dung chuc nang</div>
+      </div>
+    </div>
+  </body>
+  <script src="js_popup/table.js" type="module"></script>
+  <script src="js_popup/test.js" type="module"></script>
+  <script src="js_popup/listLink.js" type="module"></script>
+  <script src="js_popup/tableThongKe.js" type="module"></script>
+  <script src="js_popup/tableLogin.js" type="module"></script>
+</html>
